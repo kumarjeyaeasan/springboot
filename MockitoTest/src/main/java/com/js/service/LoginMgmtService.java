@@ -13,6 +13,7 @@ public class LoginMgmtService implements ILogingMgmtService {
 	@Override
 	public boolean login(String userName, String pwd) {
 		
+		//if(userName.equals("")||userName.length()==0||(pwd.equals("")||pwd.length()==0))
 		if(userName.equals("")||(pwd.equals("")))
 			throw new IllegalArgumentException("Empty Credentials");
 		
