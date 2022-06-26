@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import com.js.dao.ILoginDAO;
@@ -38,20 +39,21 @@ public class LoginMgmtServciceTest {
 		loginDAOMock=null;
 	}
 	
+	@Test
 	public void testLoginWithValidCred() {
 		// Provide Stub for DAO's authenticate method
 		Mockito.when(loginDAOMock.authenticate("senthil", "111")).thenReturn(1);
 		
 		assertTrue(loginService.login("senthil", "111"));
 	}
-	
+	@Test
 	public void testLoginWithInValidCred() {
 		// Provide Stub for DAO's authenticate method
 		Mockito.when(loginDAOMock.authenticate("senthil", "123")).thenReturn(0);
 		
 		assertFalse(loginService.login("senthil", "123"));
 	}
-	
+	@Test
 	public void testLoginWithNoCred() {
 		// Provide Stub for DAO's authenticate method
 		Mockito.when(loginDAOMock.authenticate("", "")).thenReturn(0);
