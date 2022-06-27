@@ -1,0 +1,6 @@
+# Cutstomer Info
+cust:
+  info:
+    custNo: 123
+    custName: Senthil
+    address: Bangalore
