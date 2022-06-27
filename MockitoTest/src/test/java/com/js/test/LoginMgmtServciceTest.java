@@ -63,10 +63,9 @@ public class LoginMgmtServciceTest {
 		//assertFalse(loginService.login("", ""));
 		//boolean result=loginService.login("", "");
 		
-		assertThrows(IllegalArgumentException.class, () -> {
-			loginService.login("", "");
-	    });
+		assertThrows(IllegalArgumentException.class, () -> {loginService.login("", "");});
 	}
+	/*
 	@Test
 	public void testLoginWithEmptyUserName() {
 		// Provide Stub for DAO's authenticate method
@@ -75,9 +74,7 @@ public class LoginMgmtServciceTest {
 		//assertFalse(loginService.login("", ""));
 		//boolean result=loginService.login("", "");
 		
-		assertThrows(IllegalArgumentException.class, () -> {
-			loginService.login("", "111");
-	    });
+		assertThrows(IllegalArgumentException.class, () -> {loginService.login("", "111");});
 	}
 	@Test
 	public void testLoginWithEmptyPassword() {
@@ -87,8 +84,7 @@ public class LoginMgmtServciceTest {
 		//assertFalse(loginService.login("", ""));
 		//boolean result=loginService.login("", "");
 		
-		assertThrows(IllegalArgumentException.class, () -> {
-			loginService.login("senthil", "");
-	    });
+		assertThrows(IllegalArgumentException.class, () -> {loginService.login("senthil", "");});
 	}
+	*/
 }
