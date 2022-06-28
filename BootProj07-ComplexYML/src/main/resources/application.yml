@@ -1,0 +1,35 @@
+# Employee Info
+# Simple
+org:
+  js:
+    eno: 101
+    ename: Senthil
+
+# Array
+#org.js.favColors[0]=red
+#org.js.favColors[1]=green
+#org.js.favColors[2]=blue
+    favColors: [red,green,blue]
+
+# Collection
+# List
+    nickNames: 
+      J
+      Kumar
+      Maaps
+
+# Set
+    phoneNumbers: [111111111,222222222,333333333,444444444]
+
+# Map
+    idDetails:
+      aadhar: aadh123456789
+      voter: vot123456789
+      passport: pass123456789
+
+# Has - A 
+    company: 
+      id: 123
+      name: TCS
+      address: ITPL
+      size: 5lacs
