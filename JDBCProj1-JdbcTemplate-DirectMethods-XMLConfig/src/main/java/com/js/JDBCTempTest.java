@@ -12,6 +12,7 @@ public class JDBCTempTest {
 		IEmployeeMgmtService service = ctx.getBean("empService",IEmployeeMgmtService.class);
 		try {
 			System.out.println("JDBCTempTest.main():: "+service.getEmpCount());
+			System.out.println("Emp Name:: "+service.getEmpByName(1));
 		}
 		catch(DataAccessException dae) {
 			dae.printStackTrace();

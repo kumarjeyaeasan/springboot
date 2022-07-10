@@ -13,4 +13,9 @@ public class EmployeeMgmtService implements IEmployeeMgmtService {
 	public int getEmpCount() {
 		return dao.getEmpCount();
 	}
+
+	@Override
+	public String getEmpByName(int eno) {
+		return dao.getEmpNameByEno(eno);
+	}
 }
