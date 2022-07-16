@@ -1,5 +1,8 @@
 package com.js;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -18,11 +21,16 @@ public class SpringBootDataJpa01CrudRepositoryApplication {
 		IActorMgmt service = ctx.getBean("ActorService", ActorMgmtServiceImpl.class);
 		
 		Actor actor = new Actor();
-		actor.setAname("Ajit");
-		actor.setCategory("Hero");
-		actor.setMobileno(8888888l);
+		//actor.setAid(1); // - If Existing ID is used, it will UPDATE
+		actor.setAname("Rajni");
+		actor.setCategory("Star!");
+		actor.setMobileno(9999999999l);
+		
+		List<Actor> aList = List.of(new Actor(1001,"Rajni","Hero",33333l), new Actor(1001,"Ajith","Hero",44444l));
+		
 		try {
 			System.out.println(service.RegisterActor(actor));
+			System.out.println(service.BulkRegister(aList));
 		}
 		catch(DataAccessException dae) {
 			dae.printStackTrace();
@@ -30,6 +38,7 @@ public class SpringBootDataJpa01CrudRepositoryApplication {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		((ConfigurableApplicationContext) ctx).close();
 	}
 
